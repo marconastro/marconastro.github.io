@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./img/logo chat2.png" alt="Logo" />
+    </a>
+
+    <!-- Bottone hamburger -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+  
+    <ul class="nav-links" id="nav-links">
+      <li><a href="chi_sono.html">CHI SONO</a></li>
+      <li><a href="i_miei_lavori.html">I MIEI LAVORI</a></li>
+      <li><a href="contatti.html">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <section class="intro-section">
+  <h2 class="sottotitolo">CONTATTI</h2>
+  </section>
+
+<section class="contenitore-contatti">
+  <div class="immagine-contatti">
+    <img src="./img/bari.jpg" alt="Contattami" />
+    <blockquote class="citazione" id="citazione">
+      "Dalla Montagna al Mare, dal Mare alla Montagna".
+      </blockquote>
+  </div>
+
+  <form class="form-contatti" id="formContatti" novalidate>
+    <label for="nome">Nome e Cognome:</label>
+    <input type="text" id="nome" name="nome" required placeholder="Inserisci il tuo nome e cognome"/>
+    <small class="errore" id="erroreNome"></small>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="Inserisci la tua email" />
+    <small class="errore" id="erroreEmail"></small>
+
+    <label for="oggetto">Oggetto:</label>
+    <input type="text" id="oggetto" name="oggetto" required placeholder="Inserisci l'oggetto" />
+    <small class="errore" id="erroreOggetto"></small>
+
+    <label for="messaggio">Messaggio:</label>
+    <textarea id="messaggio" name="messaggio" rows="4" required placeholder="Inserisci il tuo messaggio ..."></textarea>
+    <small class="errore" id="erroreMessaggio"></small>
+
+    <button type="submit">INVIA</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-sinistra">
+    <p>REALIZZATO DA<br><em>Marco Nastro</em></p>
+  </div>
+
+  <div class="footer-destra">
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="./img/fb.JPG" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank">
+      <img src="./img/ig.JPG" alt="Instagram">
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank">
+      <img src="./img/wa.JPG" alt="WhatsApp">
+    </a>
+  </div>
+</footer>
+
+<!-- Freccia torna su -->
+<a href="#" class="freccia-su" id="frecciaSu">&#8679;</a>
+
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>

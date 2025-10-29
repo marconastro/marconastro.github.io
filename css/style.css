@@ -1,0 +1,1047 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 65px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ffff; /* colore hover */
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.intro-section {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.sottotitolo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: none;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.descrizione {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.box-con-immagine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 60px auto;
+  gap: 30px;
+  padding: 0 20px;
+  flex-wrap: wrap; /* per farlo adattare su mobile */
+}
+
+.immagine-piccola {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.testo-laterale {
+  flex: 1;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.immagine-piccola:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Overlay per immagine ingrandita */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Bottone per chiudere (X) */
+.close-btn {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.sezione-tetris {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.testo-tetris {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  order: 1; /* testo a sinistra */
+}
+
+.griglia-immagini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  order: 2; /* immagini a destra */
+}
+
+.griglia-immagini img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.griglia-immagini img:hover {
+  transform: scale(1.05);
+}
+
+.sezione-mini-tetris {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.griglia-3-immagini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  order: 1; /* immagini a sinistra */
+}
+
+.griglia-3-immagini img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.griglia-3-immagini img:hover {
+  transform: scale(1.05);
+}
+
+.testo-mini-tetris {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  order: 2; /* testo a destra */
+}
+
+.sezione-tetris-dx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.testo-tetris-dx {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  order: 1; /* testo a sinistra */
+}
+
+.griglia-immagini-dx {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  order: 2; /* immagini a destra */
+}
+
+.griglia-immagini-dx img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.griglia-immagini-dx img:hover {
+  transform: scale(1.05);
+}
+
+.sezione-video-testo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.box-video {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.titolo-video {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+  text-align: left; /* resta allineato al video */
+}
+
+.box-video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.testo-video {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Stile iniziale: invisibile */
+.fade-in {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Quando compare */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sezione-diagonale-con-testo {
+  position: relative; 
+  max-width: 1200px;
+  margin: 60px auto;
+  min-height: 500px;
+}
+
+/* Quadrato con le due immagini */
+.contenitore-diagonale {
+  position: relative; /* *MODIFICATO*: Deve essere relative per posizionare il testo al suo interno */
+  width: 480px;
+  height: 480px;
+  /* Centriamo il blocco delle immagini all'interno della sezione */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  z-index: 1; /* Le immagini saranno sotto il testo */
+}
+
+/* Testo esteso a lato */
+.paragrafo-accanto {
+  position: absolute; /* *MODIFICATO*: Posiziona il testo rispetto a .contenitore-diagonale */
+  top: 0px;    /* *NUOVO*: Distanza dall'alto del contenitore */
+  left: 15px;   /* *NUOVO*: Distanza dalla sinistra del contenitore */
+  transform: translateY(-10%) translateX(18%); /* Regola per un centramento verticale perfetto */
+  z-index: 2;   /* Assicura che il testo sia sopra le immagini */
+  max-width: 395px; /* *MODIFICATO*: Riduci la larghezza per non coprire troppo le immagini */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  padding: 25px; /* *MODIFICATO*: Riduci il padding se vuoi un blocco più compatto */
+  border-radius: 10px;
+  text-align: left; /* *MODIFICATO*: Allinea il testo a sinistra per adattarsi alla posizione */
+}
+
+.img-bottom-left,
+.img-top-right {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Posizione: in basso a sinistra */
+.img-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+/* Posizione: in alto a destra */
+.img-top-right {
+  top: 0;
+  right: 0;
+}
+
+/* Effetto rilievo al passaggio */
+.img-bottom-left:hover,
+.img-top-right:hover {
+  transform: scale(1.05);
+}
+
+.paragrafo-basso-destra {
+  position: absolute;
+  bottom: 0px;  /* distanza dal fondo */
+  right: 5px;   /* distanza dal lato destro */
+  transform: translateY(48%) translateX(-5%);
+  max-width: 520px;  /* larghezza massima */
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.citazione {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  white-space: pre-line;
+  border-left: 3px solid #ccc;
+  padding-left: 15px;
+  margin: 30px 0;
+  width: fit-content;
+}
+
+.autore {
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.autore.visible {
+  opacity: 1;
+}
+
+/* Stile immagine autore */
+.foto-autore {
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 20px;
+  transform: translateY(-15%) translateX(500%);
+}
+
+footer.footer {
+  background-color: #222; /* stesso colore navbar */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap;
+  margin-top: 175px; /* Spazio sopra il footer */
+}
+
+.footer-sinistra p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-sinistra em {
+  font-style: italic;
+  color: #ccc;
+}
+
+.footer-destra a {
+  margin-left: 15px;
+}
+
+.footer-destra img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.footer-destra img:hover {
+  transform: scale(1.2);
+}
+
+.chi-sono {
+  padding: 60px 20px;
+  background-color: #fdfdfd; /* colore sfondo a tua scelta */
+}
+
+.contenitore-chi-sono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px; /* spazio tra immagine e testo */
+  flex-wrap: wrap; /* per adattarsi su schermi piccoli */
+}
+
+.immagine-chi-sono {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.immagine-chi-sono:hover {
+  transform: scale(1.03);
+}
+
+.testo-chi-sono {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.cv-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #555;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.separator {
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.timeline-wrapper {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  height: 1640px;
+}
+
+/* Linea verticale */
+.timeline-line {
+  width: 4px;
+  background-color: #333;
+  height: 1640px; /* aumenta se metti più tappe */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+/* Tappe a sinistra */
+.timeline-entry.left {
+  position: absolute;
+  left: calc(50% - 360px); /* spostata a sinistra rispetto alla linea */
+  width: 300px;
+}
+
+/* Tappe a destra */
+.timeline-entry.right {
+  position: absolute;
+  left: calc(50% + 60px); /* spostata a destra rispetto alla linea */
+  width: 300px;
+}
+
+/* Stile tabella */
+.timeline-table {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.timeline-table p {
+  margin: 0;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.titolo-lavoro-cliccabile {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  margin: 30px auto 0 auto; /* centrato */
+  margin-top: 30px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  width: 60%; /* centra il contenuto e lascia il 20% di margine a sinistra e destra */
+}
+
+.titolo-lavoro-cliccabile:hover {
+  background-color: #e0e0e0;
+}
+
+.testo-titolo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.freccia {
+  transition: transform 0.3s ease;
+}
+
+.titolo-lavoro-cliccabile.attiva .freccia {
+  transform: rotate(180deg); /* Ruota la freccia */
+}
+
+/* Contenuto che viene mostrato/nascosto */
+.contenuto-collassabile {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+  margin: 30px auto 0 auto; /* centrato */
+  width: 60%; /* larghezza al 100% della sezione */
+}
+
+/* Stessa tabella di prima */
+.tabella-lavoro {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.colonna-sinistra {
+  width: 30%;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.colonna-destra {
+  width: 70%;
+  padding: 15px;
+  white-space: pre-line;
+  background-color: #fff;
+}
+
+/* Animazione fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sezione-immagini-lavori {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenitore-immagini {
+  display: flex;
+  gap: 40px; /* distanza tra le immagini */
+  justify-content: space-between;
+  width: 60%; /* per allinearle come le tabelle */
+}
+
+.immagine-lavoro {
+  width: 48%;
+  height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  cursor: pointer; /* 👈 questa riga aggiunge la manina */
+}
+
+.immagine-lavoro:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contenitore-contatti {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.immagine-contatti img {
+  max-width: 538px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-contatti {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.form-contatti label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.form-contatti input,
+.form-contatti textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-contatti button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2b7cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-contatti button:hover {
+  background-color: #1a5edc;
+}
+
+.errore {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Freccia torna su */
+.freccia-su {
+  position: fixed;
+  bottom: 85px;      /* distanza dal basso */
+  right: 2%;         /* centrata */
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.freccia-su:hover {
+  background-color: #555;
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* --- Navbar Responsive con hamburger --- */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Stile per quando il menu è aperto */
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  gap: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.show li a {
+  color: black;
+}
+
+/* MEDIA QUERY per dispositivi mobili */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* 📱 MEDIA QUERIES */
+
+/* Tablet grandi e schermi medi (max 1024px) */
+@media (max-width: 1024px) {
+  .carousel {
+    height: 400px;
+  }
+
+  .contenitore-immagini,
+  .contenuto-collassabile,
+  .titolo-lavoro-cliccabile {
+    width: 80%;
+  }
+
+  .timeline-wrapper {
+    width: 90%; /* Stringe un po’ lateralmente */
+    padding: 40px 0;
+  }
+
+  .timeline-entry.left {
+    left: calc(50% - 280px); /* Avvicina le tappe al centro */
+    width: 260px;
+  }
+
+  .timeline-entry.right {
+    left: calc(50% + 40px);
+    width: 260px;
+  }
+
+  .timeline-table p {
+    font-size: 14px;
+  }
+
+  .contenitore-contatti {
+    justify-content: flex-end; /* 👉 tutto si sposta a destra */
+    gap: 60px;
+    padding: 0 100px;
+  }
+
+  .immagine-contatti img {
+    max-width: 380px;
+  }
+
+  .form-contatti {
+    width: 320px; /* stringe leggermente anche il form */
+    margin: 0 auto; /* 👈 centra orizzontalmente */
+  }
+}
+
+/* Tablet piccoli / orizzontali (max 768px) */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .carousel {
+    height: 300px;
+  }
+
+  .box-con-immagine,
+  .sezione-tetris,
+  .sezione-mini-tetris,
+  .sezione-tetris-dx,
+  .sezione-video-testo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .griglia-immagini,
+  .griglia-immagini-dx,
+  .griglia-3-immagini {
+    grid-template-columns: 1fr;
+  }
+
+  .contenitore-immagini {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .immagine-lavoro {
+    width: 100%;
+    height: 250px;
+  }
+
+  .timeline-wrapper {
+    width: 90%;
+    padding: 30px 0;
+  }
+  
+  /* Tappe più vicine alla linea ma sempre separate */
+  .timeline-entry.left {
+    left: calc(40% - 220px);
+    width: 240px;
+  }
+
+  .timeline-entry.right {
+    left: calc(45% + 20px);
+    width: 240px;
+  }
+
+  .timeline-table {
+    width: 90%;
+    margin-left: 40px; /* Distanza dalla linea verticale */
+  }
+  
+  .contenitore-contatti {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px; /* <-- margine laterale per respirare */
+  }
+
+  .immagine-contatti img {
+    max-width: 100%;
+    width: 90%; /* <-- immagine mai a pieno schermo */
+    padding: 20px;
+  }
+
+  .form-contatti {
+    width: 90%;
+    max-width: 300px; /* <-- così non diventa troppo larga */
+  }
+}
+
+/* Smartphone (max 480px) */
+@media (max-width: 480px) {
+  .logo img {
+    height: 50px;
+    width: 90px;
+  }
+
+  .sottotitolo {
+    font-size: 22px;
+  }
+
+  .descrizione,
+  .testo-laterale,
+  .testo-tetris,
+  .testo-mini-tetris,
+  .testo-tetris-dx,
+  .testo-video,
+  .paragrafo-accanto,
+  .paragrafo-basso-destra,
+  .testo-chi-sono {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .carousel {
+    height: 200px;
+  }
+
+  .immagine-piccola,
+  .immagine-chi-sono {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .immagine-lavoro {
+    height: 200px;
+  }
+
+  footer.footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .timeline-wrapper {
+    width: 95%;
+    padding: 20px 0;
+  }
+
+  .timeline-entry.left {
+    left: calc(40% - 180px);
+    width: 200px;
+  }
+
+  .timeline-entry.right {
+    left: calc(39% + 20px);
+    width: 200px;
+  }
+
+  .timeline-table {
+    width: 85%;
+    margin-left: 30px;
+  }
+
+  .timeline-table p {
+    font-size: 12px;
+  }
+  
+  .freccia-su {
+    bottom: 60px;
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+}
+
+

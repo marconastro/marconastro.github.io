@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./img/logo chat2.png" alt="Logo" />
+    </a>
+
+    <!-- Bottone hamburger -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+  
+    <ul class="nav-links" id="nav-links">
+      <li><a href="chi_sono.html">CHI SONO</a></li>
+      <li><a href="i_miei_lavori.html">I MIEI LAVORI</a></li>
+      <li><a href="contatti.html">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <section class="intro-section">
+  <h2 class="sottotitolo">CHI SONO</h2>
+  </section>
+
+  <section class="chi-sono">
+  <div class="contenitore-chi-sono">
+    <img src="./img/mechisono.jpg" alt="La mia foto" class="immagine-chi-sono" onclick="apriImmagine(this)">
+    <div class="testo-chi-sono">
+      <p>
+        Marco Nastro, clase 98'. Sono nato e vivo a Bari. Ho frequentato il Liceo Guglielmo Marconi conseguendo nell'anno 2017 il diploma da liceo scientifico <em>(scienze applicate).</em> Dopo la maturità ho iniziato il mio percorso lavorativo. Nell'ultimo periodo mi sono affacciato anche ad altri tipi di lavori e attività aprendomi ad nuove opportunità!  Inoltre ho partecipato a vari corsi di formazione con i relativi attestati di frequenza e certificazioni che inserirò come allegati nel mio CV che potrete visionare (cliccando Qui sotto).
+      </p>
+      <p> 
+         Credo che tutte queste esperienze lavorative correlate di corsi di formazione mi abbiano permesso di essere molto versatile in qualsiasi contesto arricchendo le mie abilità e consapevolezza.
+        <b>Questo portfolio è un viaggio tra le mie idee, progetti e ispirazioni.</b> 
+      </p>
+    </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+<div id="overlay" class="overlay">
+  <span class="close-btn" onclick="chiudiImmagine()">&#10006;</span>
+  <img id="img-ingrandita" src="" alt="Immagine ingrandita">
+</div>
+
+  <section class="intro-section">
+  <i class="sottotitolo">Timeline</i>
+
+  <div class="cv-container">
+    <a href="./cv/CV MARCO NASTRO 2025.pdf" download class="cv-button">SCARICA CV</a>
+    <span class="separator"> - </span>
+  <a href="./cv/ATTESTATI.pdf" download class="cv-button">ATTESTATI</a>
+  </div>
+  </section>
+
+  <section class="timeline-container">
+  <div class="timeline-wrapper">
+
+    <div class="timeline-dot"></div> <!-- 👈 Pallino -->
+
+    <!-- Prima tappa a sinistra -->
+    <div class="timeline-entry left" style="top: 0;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 12/05/2025 AL 21/07/2025</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> SER & PRACTICES S.R.L.</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> TIROCINANTE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 240px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Seconda tappa a destra (più in basso, sfalsata) -->
+    <div class="timeline-entry right" style="top: 200px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 20/09/2024 - IN CORSO </strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> HOTEL&RESIDENCE FEDERICIANO</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> CAMERIERE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 440px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Terza tappa a sinistra -->
+    <div class="timeline-entry left" style="top: 400px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 01/07/2024 AL 08/09/2024</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> ELIOR RISTORAZIONE S.P.A.</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> ADDETTO ALLA LOGISTICA DI MAGAZZINO</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 640px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Quarta tappa a destra -->
+    <div class="timeline-entry right" style="top: 600px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 01/06/2021 AL 30/09/2021</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> TENUTA MONACELLE</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> CAMERIERE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 840px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Quinta tappa a sinistra -->
+    <div class="timeline-entry left" style="top: 800px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 01/04/2020 AL 20/09/2020</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> GEMAVVÍ (NORCINERIA - BAGUETTERIA)</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> CAMERIERE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 1040px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Sesta tappa a destra -->
+    <div class="timeline-entry right" style="top: 1000px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 01/07/2019 AL 15/09/2019</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> HOTEL GARGANO VILLAGE (STAGIONE ESTIVA)</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> CAMERIERE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 1240px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Settima tappa a sinistra -->
+    <div class="timeline-entry left" style="top: 1200px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 04/12/2018 AL 30/04/2019</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> GIOVANNI RANA (CENTRO COMMERCIALE BARIBLU)</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> CAMERIERE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 1440px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Ottava tappa a destra -->
+    <div class="timeline-entry right" style="top: 1400px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 01/05/2018 AL 30/09/2018</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> NUOVO PORTICCIOLO</p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> CAMERIERE</p></td></tr>
+      </table>
+    </div>
+
+    <div class="timeline-dot" style="top: 1640px;"></div> <!-- 👈 Pallino -->
+
+    <!-- Ottava tappa a sinistra -->
+    <div class="timeline-entry left" style="top: 1600px;">
+      <table class="timeline-table">
+        <tr><td><p><strong>DAL 25/07/2017 AL 30/09/2017</strong></p></td></tr>
+        <tr><td><p><strong>AZIENDA:</strong> JUST EAT /FOOD PONY </p></td></tr>
+        <tr><td><p><strong>RUOLO:</strong> FATTORINO CONSEGNE A DOMICILIO</p></td></tr>
+      </table>
+    </div>
+
+    <!-- Linea verticale -->
+    <div class="timeline-line"></div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-sinistra">
+    <p>REALIZZATO DA<br><em>Marco Nastro</em></p>
+  </div>
+
+  <div class="footer-destra">
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="./img/fb.JPG" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank">
+      <img src="./img/ig.JPG" alt="Instagram">
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank">
+      <img src="./img/wa.JPG" alt="WhatsApp">
+    </a>
+  </div>
+</footer>
+
+<!-- Freccia torna su -->
+<a href="#" class="freccia-su" id="frecciaSu">&#8679;</a>
+
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>

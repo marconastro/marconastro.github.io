@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./img/logo chat2.png" alt="Logo" />
+    </a>
+
+    <!-- Bottone hamburger -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+  
+    <ul class="nav-links" id="nav-links">
+      <li><a href="chi_sono.html">CHI SONO</a></li>
+      <li><a href="i_miei_lavori.html">I MIEI LAVORI</a></li>
+      <li><a href="contatti.html">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <section class="intro-section">
+  <h2 class="sottotitolo">I MIEI LAVORI</h2>
+  </section>
+
+  <section class="lavori-section">
+
+  <!-- Titolo cliccabile con freccetta -->
+  <div class="titolo-lavoro-cliccabile" onclick="toggleCollapse(this)">
+     <span class="testo-titolo"><strong>CORSO IFTS</strong></span>
+    <span class="freccia">▼</span>
+  </div>
+
+  <!-- Contenuto che si mostra/nasconde -->
+  <div class="contenuto-collassabile">
+    <table class="tabella-lavoro">
+      <tr>
+        <td class="colonna-sinistra">
+          <P><strong>AZIENDA:</strong>LEADER - Società Cooperativa Consortile</P>
+          <p><strong>RUOLO:</strong>CORSISTA</p>
+        </td>
+        <td class="colonna-destra">
+            <p>Il corso ha avuto come finalità quella di formare la figura dello Sviluppatore Software, in grado di operare nelle
+               seguenti fasi: ANALISI, ACCESSO AI DATI E STRUTTURA DEI DATABASE( MY SQL, SQL), SVILUPPO APPLICATIVO, GESTIONE DELLE RETI, INTEGRAZIONE CON IL WEB, INGLESE TECNICO, SICUREZZA DEI SISTEMI INFORMATICI, SALUTE E SICUREZZA SUOI LUOGHI DI LAVORO.
+            </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+ <!-- Titolo cliccabile con freccetta -->
+  <div class="titolo-lavoro-cliccabile" onclick="toggleCollapse(this)">
+    <span class="testo-titolo"><strong>IL MIO PORTFOLIO</strong></span>
+    <span class="freccia">▼</span>
+  </div>
+
+  <!-- Contenuto che si mostra/nasconde -->
+  <div class="contenuto-collassabile">
+    <table class="tabella-lavoro">
+      <tr>
+        <td class="colonna-sinistra">
+          <P><strong>AZIENDA:</strong>SER & PRACTICES S.R.L.</P>
+          <p><strong>RUOLO:</strong>TIROCINANTE</p>
+          <p><strong>LINGUAGGIO:</strong>HTML, CSS, JavaScript</p>
+        </td>
+        <td class="colonna-destra">
+          <p>Realizzazione di un portfolio personale realizzato su Visual Studio Code con il codice HTML, utilizzando lo stile CSS per formattare e personallizare meglio le dimensioni e stile dei caratteri e delle immagini, gli spazi tra i vari contenuti ed effetti speciali visivi, il quale rendono il tutto più presentabile ed elegante!
+            Inoltre il codice JavaScript mi ha permesso anch'esso di aggiungere effetti ed interazioni con immagini e i video inseriti ed anche pulsanti e bottoni interattivi come nel caso del "SCARICA CV E ATTESTATI" e del "FORM DEI CONTATTI" per presentare i miei lavori.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Titolo cliccabile con freccetta -->
+  <div class="titolo-lavoro-cliccabile" onclick="toggleCollapse(this)">
+    <span class="testo-titolo"><strong>TIROCINIO FORMATIVO (400 ore)</strong></span>
+    <span class="freccia">▼</span>
+  </div>
+
+  <!-- Contenuto che si mostra/nasconde -->
+  <div class="contenuto-collassabile">
+    <table class="tabella-lavoro">
+      <tr>
+        <td class="colonna-sinistra">
+          <P><strong>AZIENDA:</strong>SER & PRACTICES S.R.L.</P>
+          <p><strong>RUOLO:</strong>TIROCINANTE</p>
+        </td>
+        <td class="colonna-destra">
+           <p>Durante il tirocinio è stata approfondita la conoscenza dei concetti fondamentali relativi allo sviluppo software, all’ingegneria del software e all’analisi dei requisiti.
+              Inoltre, è stato trattato l’ambito dei Content Management System (CMS), con particolare attenzione all’utilizzo di WordPress, attraverso la realizzazione pratica di un sito web.
+              Sono state acquisite nozioni introduttive su WooCommerce (piattaforma di e-commerce open-source progettata specificamente per WordPress; trasforma un sito web in un negozio online eCommerce),
+              e brevi accenni di PHP, MySQL e sulle tecnologie dello stack di sviluppo utilizzato.
+           </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</section>
+
+<section class="sezione-immagini-lavori">
+  <div class="contenitore-immagini">
+    <img src="./img/lavori.JPG" alt="Immagine sinistra" class="immagine-lavoro" onclick="apriImmagine(this)">
+    <img src="./img/lavori3.jpg" alt="Immagine destra" class="immagine-lavoro" onclick="apriImmagine(this)">
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="overlay" class="overlay">
+  <span class="close-btn" onclick="chiudiImmagine()">&#10006;</span>
+  <img id="img-ingrandita" src="" alt="Immagine ingrandita">
+</div>
+
+<footer class="footer">
+  <div class="footer-sinistra">
+    <p>REALIZZATO DA<br><em>Marco Nastro</em></p>
+  </div>
+
+  <div class="footer-destra">
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="./img/fb.JPG" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank">
+      <img src="./img/ig.JPG" alt="Instagram">
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank">
+      <img src="./img/wa.JPG" alt="WhatsApp">
+    </a>
+  </div>
+</footer>
+
+<!-- Freccia torna su -->
+<a href="#" class="freccia-su" id="frecciaSu">&#8679;</a>
+
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>

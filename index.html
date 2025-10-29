@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./img/logo chat2.png" alt="Logo" />
+    </a>
+
+    <!-- Bottone hamburger -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+  
+    <ul class="nav-links" id="nav-links">
+      <li><a href="chi_sono.html">CHI SONO</a></li>
+      <li><a href="i_miei_lavori.html">I MIEI LAVORI</a></li>
+      <li><a href="contatti.html">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <!-- CAROSELLO -->
+<div class="carousel-container">
+  <div class="carousel">
+    <img src="./img/Cattura.PNG" class="slide active" alt="Immagine 1">
+    <img src="./img/web_developer.JPG" class="slide" alt="Immagine 2">
+    <img src="./img/webdevel.jpg" class="slide" alt="Immagine 3">
+    <img src="./img/webdevel2.JPG" class="slide" alt="Immagine 4">
+
+    <!-- Frecce -->
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<!-- SOTTOTITOLO + PARAGRAFO -->
+<section class="intro-section">
+  <h2 class="sottotitolo">MY PORTFOLIO</h2>
+  <p class="descrizione">
+    Scorrendo tra le seguenti pagine avrete modo di scoprire quali sono stati i miei percorsi.
+    Diplomato Liceo Scientifico. Frequentazione di corsi con annesse certificazioni. Ed esperienze lavorative.
+  </p>
+</section>
+
+<section class="box-con-immagine">
+  <img src="./img/b2ingle.jpg" alt="Immagine profilo" class="immagine-piccola" onclick="apriImmagine(this)">
+  <div class="testo-laterale">
+    <p>
+      CERTIFICAZIONE INGLESE B2. &#x2713;
+    </p>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="overlay" class="overlay">
+  <span class="close-btn" onclick="chiudiImmagine()">&#10006;</span>
+  <img id="img-ingrandita" src="" alt="Immagine ingrandita">
+</div>
+
+<section class="sezione-tetris">
+  <div class="griglia-immagini">
+    <img src="./img/mecameriere.jpeg" alt="Tetris 1" onclick="apriImmagine(this)">
+    <img src="./img/cameriere.JPG" alt="Tetris 2" onclick="apriImmagine(this)">
+    <img src="./img/mepizza.jpg" alt="Tetris 3" onclick="apriImmagine(this)">
+    <img src="./img/pizzeria.JPG" alt="Tetris 4" onclick="apriImmagine(this)">
+  </div>
+  <div class="testo-tetris">
+    <p>
+       Il mio percorso lavorativo ha avuto inizio nel settore della Ristorazione. Maggior esperienza acquisita come profilo da camerire di sala. Per un breve periodo come pizzaiolo.
+    </p>
+  </div>
+</section>
+
+<section class="sezione-mini-tetris">
+  <div class="griglia-3-immagini">
+    <img src="./img/calcio2.JPG" alt="Mini 1" onclick="apriImmagine(this)">
+    <img src="./img/boxe.JPG" alt="Mini 2" onclick="apriImmagine(this)">
+    <img src="./img/calcio.JPG" alt="Mini 3" onclick="apriImmagine(this)">
+  </div>
+  <div class="testo-mini-tetris">
+    <p>
+       Sono un ragazzo sportivo, in particolar modo ho praticato calcio a livello agonistico (disputando competizioni regionali). Ho praticato Pugilato per circa 1 anno.
+    </p>
+  </div>
+</section>
+
+<section class="sezione-tetris-dx">
+  <div class="testo-tetris-dx">
+    <p>
+     Sono un appassionato di buona musica e della lettura. Ho un gran interesse per l'arte e la natura.
+    </p>
+  </div>
+  <div class="griglia-immagini-dx">
+    <img src="./img/librinatura2.JPG" alt="Tetris dx 1" onclick="apriImmagine(this)">
+    <img src="./img/libronatura.JPG" alt="Tetris dx 2" onclick="apriImmagine(this)">
+    <img src="./img/libro 3.JPG" alt="Tetris dx 3" onclick="apriImmagine(this)">
+    <img src="./img/pianoforte.JPG" alt="Tetris dx 4" onclick="apriImmagine(this)">
+  </div>
+</section>
+
+<section class="sezione-video-testo" style="display: flex; align-items: center">
+  <div class="box-video fade-in">
+    
+      <a href="https://www.youtube.com/watch?v=v8rBi8t9y0Y" target="_blank" style="text-decoration: none;">
+        <h3 class="titolo-video">IL POSTO NEL CUORE.</h3>
+      </a>
+    
+    <video controls width="100%" controls>
+      <source src="./video/Il-posto-del-cuore.mp4" type="video/mp4">
+      Il tuo browser non supporta il video HTML5.
+    </video>
+  </div>
+  <div class="testo-video">
+    <p>
+      Partecipazione al cortometraggio realizzato per sostenere un progetto di beneficenza promosso  dall'associazione <strong>Agebeo e Amici di Vincenzo Onlus</strong>.
+    </p>
+  </div>
+</section>
+
+<section class="sezione-diagonale-con-testo">
+  <div class="contenitore-diagonale">
+    <img src="./img/meneve.jpg" alt="Immagine in basso a sinistra" class="img-bottom-left" onclick="apriImmagine(this)">
+    <img src="./img/monte.JPG" alt="Immagine in alto a destra" class="img-top-right" onclick="apriImmagine(this)">
+  </div>
+
+  <div class="paragrafo-accanto">
+      <p>
+          Il tutto vi offre una panoramica di quella che è la mia preparazione didattica e le mie esperienze professionali, le quali contribuiranno a dare forma alla mia persona ed il mio temperamento.
+      </p>
+  </div>
+
+  <div class="paragrafo-basso-destra">
+      <blockquote class="citazione" id="citazione">
+       "Non occorre arrivare in cima per goderci la vita e non serve essere alla continua ricerca di montagne da scalare e di cime da raggiungere, ogni tanto possiamo anche farci una semplice passeggiata in pianure e goderci il rassicurante paesaggio del presente."
+      </blockquote>
+      <p class="autore">
+          — Tratto dal libro <em>"Quel che fu Bellavista"</em> di
+        <a href="https://bit.ly/44TimcD" target="_blank" style="text-decoration: none; color: inherit;">
+          <strong>Simone Barbone</strong>
+        </a>
+        <br>
+        <a href="https://bit.ly/44TimcD" target="_blank">
+          <img src="./img/simoneb.JPG" alt="Simone Barbone" class="foto-autore" style="height: 80px; border-radius: 50%; margin-top: 20px; transform: translateY(-15%) translateX(500%);">
+        </a>
+      </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-sinistra">
+    <p>REALIZZATO DA<br><em>Marco Nastro</em></p>
+  </div>
+
+  <div class="footer-destra">
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="./img/fb.JPG" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank">
+      <img src="./img/ig.JPG" alt="Instagram">
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank">
+      <img src="./img/wa.JPG" alt="WhatsApp">
+    </a>
+  </div>
+</footer>
+
+<!-- Freccia torna su -->
+<a href="#" class="freccia-su" id="frecciaSu">&#8679;</a>
+
+
+
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
